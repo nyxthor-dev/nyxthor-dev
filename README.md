@@ -101,22 +101,3 @@ Colección de herramientas y scripts útiles para desarrollo
     <img src="https://img.shields.io/badge/Explorar-667eea?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </p>
-📫 Conecta Conmigo
-<p align="center">
-  <a href="mailto:vm1008079@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://github.com/vm1008079-web">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-  </a>
-</p>
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:f093fb,50:764ba2,100:667eea&height=150&section=footer" />
-</div>
