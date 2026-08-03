@@ -1,321 +1,71 @@
-"""
-Wrapper del cliente DeepSeek con gestión de sesiones y archivos.
-Importa el motor desde la carpeta deepseekcli.
-"""
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Nyxthor&fontSize=70&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Full%20Stack%20Developer%20%7C%20APIs%20%7C%20Web%20Scraping&descAlignY=55&descSize=18"/>
+</p>
 
-import logging
-import os
-import sys
-import threading
-from pathlib import Path
-from queue import Empty, Queue
-from typing import Any, Dict, Generator, List, Optional
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=A855F7&width=435&lines=Full+Stack+Developer;APIs+con+Flask+%26+Node.js;Web+Scraping;Estudiante+de+Inform%C3%A1tica" alt="Typing SVG" />
+</p>
 
-logger = logging.getLogger(__name__)
+## 👤 Sobre mí
 
-current_file = Path(__file__).resolve()
-project_root = current_file.parent.parent.parent
+Desarrollador Full Stack enfocado en construir aplicaciones web, APIs REST y herramientas de automatización.  
+Estudiante de **2do año en Técnico en Informática** — *IPI Carlos Marx, Matanzas, Cuba*.  
+Me especializo en transformar ideas en código funcional, con énfasis en **Python (Flask)**, **JavaScript/Node.js** y **web scraping**.
 
-if str(project_root) not in sys.path:
-    sys.path.insert(0, str(project_root))
+---
 
-deepseekcli_path = project_root / "deepseekcli"
-if not deepseekcli_path.exists():
-    raise ImportError(f"No se encontró la carpeta 'deepseekcli' en: {deepseekcli_path}")
+## 🛠️ Tech Stack
 
-from deepseekcli import DeepSeekClient  # noqa: E402
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+</p>
 
-from config import Config  # noqa: E402
+---
 
+## 📊 GitHub Stats
 
-class DeepSeekService:
-    """Servicio singleton (thread-safe) para mantener el cliente DeepSeek."""
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=vm1008079-web&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" height="165" />
+  <img src="https://streak-stats.demolab.com?user=vm1008079-web&theme=tokyonight&hide_border=true" height="165" />
+</p>
 
-    _instance = None
-    _init_lock = threading.Lock()
-    _client = None
-    _chat_semaphore: Optional[threading.Semaphore] = None
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vm1008079-web&layout=compact&theme=tokyonight&hide_border=true" height="165" />
+</p>
 
-    def __new__(cls):
-        if cls._instance is None:
-            with cls._init_lock:
-                if cls._instance is None:
-                    cls._instance = super().__new__(cls)
-        return cls._instance
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vm1008079-web&theme=tokyo-night&hide_border=true" />
+</p>
 
-    def __init__(self):
-        if self._client is not None:
-            return
-        with self._init_lock:
-            if self._client is not None:
-                return
-            try:
-                token, cookies = Config.DEEPSEEK_TOKEN, Config.DEEPSEEK_COOKIES
-                if not token or not cookies:
-                    raise ValueError("Faltan DEEPSEEK_TOKEN y/o DEEPSEEK_COOKIES")
-                login_dir = Path(Config.DEEPSEEK_LOGIN_DIR)
-                self._client = DeepSeekClient(token=token, cookies=cookies, login_dir=login_dir)
-                self._chat_semaphore = threading.Semaphore(Config.MAX_CONCURRENT_CHATS)
-                logger.info("✅ Cliente DeepSeek inicializado correctamente")
-            except Exception:
-                logger.exception("❌ Error al inicializar el cliente DeepSeek")
-                raise
+---
 
-    @property
-    def client(self) -> DeepSeekClient:
-        return self._client
+## 🚀 Proyectos Destacados
 
-    def create_session(self) -> str:
-        try:
-            session_id = self.client.create_chat_session()
-            logger.info("✅ Sesión creada: %s", session_id)
-            return session_id
-        except Exception:
-            logger.error("❌ Error al crear sesión", exc_info=True)
-            raise
+| Proyecto | Descripción | Stack |
+|----------|-------------|-------|
+| [**toDus-API**](https://github.com/vm1008079-web/toDus-API) | API no oficial para ToDus (mensajería cubana). Cliente Python con soporte para upload/download de archivos. | `Python` `API` |
+| [**Asta Bot**](https://github.com/Fer280809/Asta_bot) | Bot multi-funcional para WhatsApp usando BaileysJS. Automatización de respuestas y gestión de grupos. | `JavaScript` `Node.js` `BaileysJS` |
+| **Portfolio Web** *(En desarrollo)* | Sitio personal responsive para mostrar proyectos y habilidades. Mobile-first. | `HTML` `CSS` `JS` |
+| **Utilidades Web** *(En desarrollo)* | Scripts de automatización y herramientas de productividad para desarrollo. | `Python` `PHP` |
 
-    def upload_file(self, file_path: str, thinking: bool = True) -> str:
-        try:
-            file_id = self.client.upload_file(file_path, thinking_enabled=thinking)
-            logger.info("✅ Archivo subido: %s", file_id)
-            return file_id
-        except Exception:
-            logger.error("❌ Error al subir archivo", exc_info=True)
-            raise
+---
 
-    # ============================================================
-    # HELPERS INTERNOS (no duplicar código)
-    # ============================================================
+## 📫 Contacto
 
-    def _run_chat_in_thread(
-        self,
-        queue: Queue,
-        target_func,
-        *args,
-        **kwargs,
-    ) -> threading.Thread:
-        """Ejecuta cualquier método del cliente en un hilo daemon y
-        alimenta la cola con eventos (think, response, done, error)."""
+<p align="center">
+  <a href="https://github.com/vm1008079-web">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <!-- Añade tu email o Telegram aquí -->
+</p>
 
-        def worker():
-            try:
-                result = target_func(*args, **kwargs)
-                # El cliente devuelve tuplas; desempaquetamos según el método.
-                # NOTA: think/response YA se enviaron a la cola en tiempo real
-                # a través de los callbacks on_think_chunk/on_response_chunk
-                # (ver send_message/regenerate_message/continue_message más
-                # abajo). Reenviarlos aquí de nuevo duplicaría todo el texto.
-                # Solo queda comunicar que terminó, con el id del mensaje.
-                if isinstance(result, tuple):
-                    if len(result) == 4:  # (think, response, msg_id, is_incomplete)
-                        _think, _response, msg_id, is_incomplete = result
-                        queue.put(("done", {"msg_id": msg_id, "is_incomplete": is_incomplete}))
-                    elif len(result) == 3:  # (think, response, msg_id) — legacy
-                        _think, _response, msg_id = result
-                        queue.put(("done", {"msg_id": msg_id, "is_incomplete": False}))
-                    else:
-                        queue.put(("error", f"Formato de respuesta inesperado: {result}"))
-                else:
-                    queue.put(("error", f"Formato de respuesta inesperado: {result}"))
-            except Exception as e:
-                logger.exception("❌ Error en el hilo de chat")
-                queue.put(("error", str(e)))
-            finally:
-                self._chat_semaphore.release()
-
-        acquired = self._chat_semaphore.acquire(timeout=Config.CHAT_TIMEOUT_SECONDS)
-        if not acquired:
-            queue.put(("error", "Servidor saturado, intenta de nuevo en unos segundos."))
-            return None
-
-        thread = threading.Thread(target=worker, daemon=True)
-        thread.start()
-        return thread
-
-    def _yield_from_queue(
-        self,
-        queue: Queue,
-        timeout: int,
-    ) -> Generator[Dict[str, Any], None, None]:
-        """Consume eventos de la cola hasta recibir done/error/timeout."""
-        deadline_hit = False
-        while True:
-            try:
-                event_type, data = queue.get(timeout=timeout)
-            except Empty:
-                deadline_hit = True
-                yield {"type": "error", "data": "Tiempo de espera agotado esperando respuesta del backend."}
-                break
-
-            if event_type == "done":
-                yield {"type": "done", "data": data}
-                break
-            elif event_type == "error":
-                yield {"type": "error", "data": data}
-                break
-            else:
-                yield {"type": event_type, "data": data}
-
-        if deadline_hit:
-            # Dar tiempo al hilo para terminar limpiamente
-            pass
-
-    # ============================================================
-    # SEND MESSAGE (chat normal)
-    # ============================================================
-
-    def send_message(
-        self,
-        session_id: str,
-        prompt: str,
-        parent_message_id: Optional[int] = None,
-        ref_file_ids: Optional[List[str]] = None,
-        thinking_enabled: bool = True,
-        search_enabled: bool = True,
-        model_type: Optional[str] = None,
-    ) -> Generator[Dict[str, Any], None, None]:
-        """Envía un mensaje y devuelve un generador de eventos (streaming interno)."""
-        if Config.LOG_PROMPT_CONTENT:
-            logger.info("📤 session=%s thinking=%s search=%s prompt=%r", session_id, thinking_enabled, search_enabled, prompt[:100])
-        else:
-            logger.info("📤 session=%s thinking=%s search=%s len(prompt)=%d", session_id, thinking_enabled, search_enabled, len(prompt))
-
-        queue: Queue = Queue()
-
-        def on_think(chunk: str):
-            queue.put(("think", chunk))
-
-        def on_response(chunk: str):
-            queue.put(("response", chunk))
-
-        def on_msg_id(msg_id: int):
-            queue.put(("msg_id", msg_id))
-
-        def target():
-            return self.client.chat(
-                prompt=prompt,
-                session_id=session_id,
-                parent_message_id=parent_message_id,
-                ref_file_ids=ref_file_ids,
-                stream=True,
-                thinking_enabled=thinking_enabled,
-                search_enabled=search_enabled,
-                print_output=False,
-                on_think_chunk=on_think,
-                on_response_chunk=on_response,
-                on_message_id=on_msg_id,
-                save_history=True,
-            )
-
-        thread = self._run_chat_in_thread(queue, target)
-        if thread is None:
-            yield {"type": "error", "data": "Servidor saturado, intenta de nuevo en unos segundos."}
-            return
-
-        yield from self._yield_from_queue(queue, Config.CHAT_TIMEOUT_SECONDS)
-
-    # ============================================================
-    # REGENERATE
-    # ============================================================
-
-    def regenerate_message(
-        self,
-        session_id: str,
-        child_message_id: int,
-        thinking_enabled: bool = True,
-        search_enabled: bool = True,
-        user_options: Optional[Dict[str, Any]] = None,
-    ) -> Generator[Dict[str, Any], None, None]:
-        """Regenera una respuesta existente. Devuelve generador de eventos."""
-        logger.info("🔄 Regenerando message_id=%s en session=%s", child_message_id, session_id)
-
-        queue: Queue = Queue()
-
-        def on_think(chunk: str):
-            queue.put(("think", chunk))
-
-        def on_response(chunk: str):
-            queue.put(("response", chunk))
-
-        def on_msg_id(msg_id: int):
-            queue.put(("msg_id", msg_id))
-
-        def target():
-            return self.client.regenerate(
-                session_id=session_id,
-                child_message_id=child_message_id,
-                stream=True,
-                thinking_enabled=thinking_enabled,
-                search_enabled=search_enabled,
-                user_options=user_options,
-                print_output=False,
-                on_think_chunk=on_think,
-                on_response_chunk=on_response,
-                on_message_id=on_msg_id,
-                save_history=True,
-            )
-
-        thread = self._run_chat_in_thread(queue, target)
-        if thread is None:
-            yield {"type": "error", "data": "Servidor saturado, intenta de nuevo en unos segundos."}
-            return
-
-        yield from self._yield_from_queue(queue, Config.CHAT_TIMEOUT_SECONDS)
-
-    # ============================================================
-    # STOP STREAM
-    # ============================================================
-
-    def stop_message_stream(self, session_id: str, message_id: int) -> Dict[str, Any]:
-        """Detiene la generación en curso de un mensaje específico."""
-        logger.info("🛑 Deteniendo stream message_id=%s en session=%s", message_id, session_id)
-        try:
-            result = self.client.stop_stream(session_id=session_id, message_id=message_id)
-            return {"success": True, "data": result}
-        except Exception as e:
-            logger.exception("❌ Error al detener stream")
-            return {"success": False, "error": str(e)}
-
-    # ============================================================
-    # CONTINUE GENERATION
-    # ============================================================
-
-    def continue_message(
-        self,
-        session_id: str,
-        message_id: int,
-        fallback_to_resume: bool = True,
-    ) -> Generator[Dict[str, Any], None, None]:
-        """Continúa una respuesta que quedó INCOMPLETE."""
-        logger.info("▶️ Continuando message_id=%s en session=%s", message_id, session_id)
-
-        queue: Queue = Queue()
-
-        def on_think(chunk: str):
-            queue.put(("think", chunk))
-
-        def on_response(chunk: str):
-            queue.put(("response", chunk))
-
-        def on_msg_id(msg_id: int):
-            queue.put(("msg_id", msg_id))
-
-        def target():
-            return self.client.continue_generation(
-                session_id=session_id,
-                message_id=message_id,
-                fallback_to_resume=fallback_to_resume,
-                stream=True,
-                print_output=False,
-                on_think_chunk=on_think,
-                on_response_chunk=on_response,
-                on_message_id=on_msg_id,
-                save_history=False,
-            )
-
-        thread = self._run_chat_in_thread(queue, target)
-        if thread is None:
-            yield {"type": "error", "data": "Servidor saturado, intenta de nuevo en unos segundos."}
-            return
-
-        yield from self._yield_from_queue(queue, Config.CHAT_TIMEOUT_SECONDS)
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=120&section=footer"/>
+</p>
