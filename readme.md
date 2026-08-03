@@ -31,8 +31,12 @@ Estudiante de **2do año en Técnico en Informática** — *IPI Carlos Marx, Mat
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nyxthor-dev&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nyxthor-dev&layout=compact&theme=tokyonight&hide_border=true" height="170" />
+  <a href="https://github.com/nyxthor-dev">
+    <img src="https://img.shields.io/badge/Repos%20Públicos-📦-667eea?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/nyxthor-dev?tab=repositories">
+    <img src="https://img.shields.io/badge/Ver%20todos%20los%20repos-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
 </p>
 
 ---
@@ -42,8 +46,9 @@ Estudiante de **2do año en Técnico en Informática** — *IPI Carlos Marx, Mat
 | Proyecto | Descripción | Stack |
 |----------|-------------|-------|
 | [**Asta-Bot**](https://github.com/nyxthor-dev/Asta-Bot) | Bot multi-funcional para WhatsApp. Automatización, gestión de grupos y comandos personalizados. | `JavaScript` `Node.js` `BaileysJS` |
-| [**toDus-API**](https://github.com/nyxthor-dev/toDus-API) | API no oficial para ToDus. Cliente Python con soporte para todas las funcde todus. | `Python` `API` |
-| **DS-FlaskAPI** *(En desarrollo)* | API no oficial para chat.deepseek.com y chat web disponible | `HTML` `CSS` `JS` `PYTHON` |
+| [**toDus-API**](https://github.com/nyxthor-dev/toDus-API) | API no oficial para ToDus. Cliente Python con soporte upload/download. | `Python` `API` |
+| **Portfolio Web** *(En desarrollo)* | Sitio personal responsive. Mobile-first. | `HTML` `CSS` `JS` |
+| **Web Scraper Tools** *(En desarrollo)* | Scripts de scraping y automatización de datos. | `Python` `Node.js` |
 
 ---
 
