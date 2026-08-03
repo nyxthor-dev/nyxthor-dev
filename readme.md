@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Nyxthor&fontSize=70&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Full%20Stack%20Developer%20%7C%20APIs%20%7C%20Web%20Scraping&descAlignY=55&descSize=18"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=180&section=header&text=Nyxthor&fontSize=70&fontColor=fff&animation=fadeIn&fontAlignY=40&desc=Full%20Stack%20Developer%20%7C%20APIs%20%7C%20Web%20Scraping&descAlignY=60&descSize=16"/>
 </p>
 
 <p align="center">
@@ -8,9 +8,8 @@
 
 ## 👤 Sobre mí
 
-Desarrollador Full Stack enfocado en construir aplicaciones web, APIs REST y herramientas de automatización.  
-Estudiante de **2do año en Técnico en Informática** — *IPI Carlos Marx, Matanzas, Cuba*.  
-Me especializo en transformar ideas en código funcional, con énfasis en **Python (Flask)**, **JavaScript/Node.js** y **web scraping**.
+Desarrollador Full Stack enfocado en aplicaciones web, APIs REST y automatización.  
+Estudiante de **2do año en Técnico en Informática** — *IPI Carlos Marx, Matanzas, Cuba*.
 
 ---
 
@@ -32,16 +31,8 @@ Me especializo en transformar ideas en código funcional, con énfasis en **Pyth
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=vm1008079-web&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" height="165" />
-  <img src="https://streak-stats.demolab.com?user=vm1008079-web&theme=tokyonight&hide_border=true" height="165" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vm1008079-web&layout=compact&theme=tokyonight&hide_border=true" height="165" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vm1008079-web&theme=tokyo-night&hide_border=true" />
+  <img src="https://github-readme-stats.vercel.app/api?username=nyxthor-dev&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nyxthor-dev&layout=compact&theme=tokyonight&hide_border=true" height="170" />
 </p>
 
 ---
@@ -50,22 +41,20 @@ Me especializo en transformar ideas en código funcional, con énfasis en **Pyth
 
 | Proyecto | Descripción | Stack |
 |----------|-------------|-------|
-| [**toDus-API**](https://github.com/vm1008079-web/toDus-API) | API no oficial para ToDus (mensajería cubana). Cliente Python con soporte para upload/download de archivos. | `Python` `API` |
-| [**Asta Bot**](https://github.com/Fer280809/Asta_bot) | Bot multi-funcional para WhatsApp usando BaileysJS. Automatización de respuestas y gestión de grupos. | `JavaScript` `Node.js` `BaileysJS` |
-| **Portfolio Web** *(En desarrollo)* | Sitio personal responsive para mostrar proyectos y habilidades. Mobile-first. | `HTML` `CSS` `JS` |
-| **Utilidades Web** *(En desarrollo)* | Scripts de automatización y herramientas de productividad para desarrollo. | `Python` `PHP` |
+| [**Asta-Bot**](https://github.com/nyxthor-dev/Asta-Bot) | Bot multi-funcional para WhatsApp. Automatización, gestión de grupos y comandos personalizados. | `JavaScript` `Node.js` `BaileysJS` |
+| [**toDus-API**](https://github.com/nyxthor-dev/toDus-API) | API no oficial para ToDus. Cliente Python con soporte para todas las funcde todus. | `Python` `API` |
+| **DS-FlaskAPI** *(En desarrollo)* | API no oficial para chat.deepseek.com y chat web disponible | `HTML` `CSS` `JS` `PYTHON` |
 
 ---
 
 ## 📫 Contacto
 
 <p align="center">
-  <a href="https://github.com/vm1008079-web">
+  <a href="https://github.com/nyxthor-dev">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <!-- Añade tu email o Telegram aquí -->
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=120&section=footer"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=100&section=footer"/>
 </p>
