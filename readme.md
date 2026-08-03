@@ -31,11 +31,15 @@ Estudiante de **2do año en Técnico en Informática** — *IPI Carlos Marx, Mat
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nyxthor-dev&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="GitHub Stats" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nyxthor-dev&layout=compact&theme=dark" alt="Top languages" />
+  <a href="https://github.com/nyxthor-dev?tab=repositories">
+    <img src="https://img.shields.io/github/followers/nyxthor-dev?label=Followers&style=for-the-badge&color=blue" />
+  </a>
+  <a href="https://github.com/nyxthor-dev?tab=repositories">
+    <img src="https://img.shields.io/github/stars/nyxthor-dev?label=Stars&style=for-the-badge&color=yellow" />
+  </a>
+  <a href="https://github.com/nyxthor-dev">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/nyxthor-dev&label=Public%20Repos&query=$.public_repos&style=for-the-badge&color=green" />
+  </a>
 </p>
 
 <p align="center">
