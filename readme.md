@@ -65,6 +65,9 @@ Estudiante de **2do año en Técnico en Informática** — *IPI Carlos Marx, Mat
   <a href="https://github.com/nyxthor-dev">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
+  <a href="https://pin.it/52mLhhAlw">
+    <img src="https://img.shields.io/badge/Pinterest-E60023?style=for-the-badge&logo=pinterest&logoColor=white" />
+  </a>
 </p>
 
 <p align="center">
