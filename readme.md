@@ -30,9 +30,18 @@ Estudiante de **2do año en Técnico en Informática** — *IPI Carlos Marx, Mat
 
 ## 📊 GitHub Stats
 
-![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=nyxthor-dev&layout=compact&theme=dark)
-![Followers](https://img.shields.io/github/followers/nyxthor-dev?label=Followers&style=social) ![Stars](https://img.shields.io/github/stars/nyxthor-dev?style=social)
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=nyxthor-dev&theme=dark)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=nyxthor-dev&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="GitHub Stats" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nyxthor-dev&layout=compact&theme=dark" alt="Top languages" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=nyxthor-dev&theme=dark" alt="GitHub Streak" />
+</p>
+
 ---
 
 ## 🚀 Proyectos Destacados
